@@ -28,6 +28,17 @@
   <script src="jcubic/js/jquery.terminal.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <link href="jcubic/css/jquery.terminal.css" rel="stylesheet"/>
+  <!-- Hotjar Tracking Code for http://compilepad-webide.rhcloud.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+       h._hjSettings={hjid:339682,hjsv:5};
+       a=o.getElementsByTagName('head')[0];
+       r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+       a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 </head>
 
@@ -50,7 +61,8 @@
                 <li><a href="compilepad.php">IDE</a></li>
                 <li><a href="#fea">Features</a></li>
                 <li><a href="#about">About Us</a></li>
-              </ul>
+                  <li><a href="#contact">Contact Us</a></li>
+           </ul>
             </nav>
           </div>
         </div>
@@ -174,8 +186,41 @@
           -->
         </div>
       </div><!-- /.row -->
-
       
+       <hr class="featurette-divider">
+
+<a name="contact"></a>
+<div class="col-lg-6">
+  <h3 class="featurette-heading"> Contact Us.  <span class="text-muted">We'd love to help you.</span></h3>
+</div>
+
+
+<div class="col-lg-5">
+<form method="post" action="https://formspree.io/individualdesires@gmail.com" style="width: 500px" >
+   <div class="ajax-hidden">
+       <div class="form-group wow fadeInUp">
+        <label class="sr-only" for="c_name">Name</label>
+        <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+       </div>
+
+       <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+        <label class="sr-only" for="c_email">Email</label>
+        <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+       </div>
+
+       <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+        <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+       </div>
+                            
+       
+       <button type="submit" style="background-color:grey; "class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+      </div>
+      <div class="ajax-response"></div>
+  <input type="hidden" name="_next" value="thanks.php" />
+     </form></div>
+
+
+
       <!-- /END THE FEATURETTES -->
     </div>
 
@@ -217,7 +262,7 @@ jQuery(document).ready(function($) {
   greetings: "\nWelcome human! Enter help to list all available commands\n",
   onBlur: function() {
             // prevent loosing focus
-            return false;
+            return true;
           }
         });
 });
@@ -232,5 +277,7 @@ $("#terminal").animate({ scrollTop: $("#terminal")[0].scrollHeight}, 1000);
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+
   </body>
   </html>
